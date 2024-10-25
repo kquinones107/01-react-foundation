@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState } from 'react';
 
 
 
@@ -10,13 +10,14 @@ export const Counter = () => {
         setCount( count + value );
     }
 
-  return (
+    return (
     <>
-        <h3>Contador <small> { count } </small></h3>
+        <h3>Contador: <small>{ count }</small></h3>
 
         <div>
             <button onClick={ () => increaseBy (+1)}> +1 </button>
-            &nbsp
+
+             
             <button onClick={ () => increaseBy (-1)}> -1 </button>
 
         </div>

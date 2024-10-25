@@ -1,4 +1,4 @@
-import { Counter } from "./components"
+import { LoginPage } from "./components"
 
 
 function App() {
@@ -10,7 +10,9 @@ function App() {
         {/*<BasicTypes/> */}
         {/* <ObjectLiteral/> */} 
        {/* <BasicFunction/> */}
-        < Counter/>
+        {/*< Counter/> */}
+        {/* < CounterWithHook/> */}
+        <LoginPage/>
     </main>
   )
 }
