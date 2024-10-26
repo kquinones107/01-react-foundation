@@ -30,7 +30,11 @@ export const  useAuthStore = create<AuthState>()( (set) => ({
 
     }, 
     logout: () => {
-        set({ status: 'authenticated'})
+        set({ 
+            status: 'authenticated',
+            token: undefined,
+            user: undefined
+        })
     },
 })
 )
