@@ -26,7 +26,7 @@ export const  useAuthStore = create<AuthState>()( (set) => ({
                 name: 'Kevin Jair',
                 email: email,
             }
-        })
+        });
 
     }, 
     logout: () => {
@@ -34,7 +34,7 @@ export const  useAuthStore = create<AuthState>()( (set) => ({
             status: 'authenticated',
             token: undefined,
             user: undefined
-        })
+        });
     },
 })
-)
+);

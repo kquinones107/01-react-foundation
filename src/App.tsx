@@ -1,4 +1,4 @@
-import { UsersPage } from "./components"
+import { FormsPage, UsersPage } from "./components"
 
 
 function App() {
@@ -11,9 +11,10 @@ function App() {
         {/* <ObjectLiteral/> */} 
        {/* <BasicFunction/> */}
         {/*< Counter/> */}
-        {/* < CounterWithHook/> */}
-        {/*<LoginPage/>*/}
+        {/*< CounterWithHook/> */}
+        {/*<LoginPage/> */}
         <UsersPage/>
+        <FormsPage/>
     </main>
   )
 }

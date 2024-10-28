@@ -14,9 +14,9 @@ export const LoginPage = () => {
       setTimeout(() => {
         logout();
       }, 1500);
-    },[])
+    }, [] );
 
-    if ( authStatus === 'checking'){
+    if ( authStatus === 'checking')  {
         return <h3>Loading..</h3>
     }
 
@@ -26,19 +26,21 @@ export const LoginPage = () => {
 
         {
           ( authStatus === 'authenticated' )
-            ? <div>Autenticado como: { JSON.stringify( user, null, 2 ) }</div>
+            ? <div>Autenticado como: { JSON.stringify( user, null, 2 ) } </div>
             : <div>No Autenticado</div>
         }
 
         {
         ( authStatus === 'authenticated' )
           ? (
-            <button onClick={ logout }>Logout</button>
+            <button onClick={ logout }> Logout </button>
           )
-          :(
-            <button onClick={ ()=> login ('kevinquinones177@gmail.com', '1234') }>Login</button>
+          : (
+            <button onClick={ ()=> login ('kevinquinones177@gmail.com', '1234') }> 
+             Login 
+            </button>
           )
         }
     </>
-  )
-}
+  );
+};
