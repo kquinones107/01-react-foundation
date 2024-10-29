@@ -7,16 +7,22 @@ type FormInputs = {
 
 export const FormsPage = () => {
 
-const { register } = useForm<FormInputs>({
+const { register, handleSubmit, formState, watch } = useForm<FormInputs>({
   defaultValues: {
     email: 'kevinquinones177mqgmail.com',
     password: 'abc123'
   }
 });
 
+const onSubmit = ( myForm: FormInputs) => {
+  console.log({ myForm});
+}
+
+console.log(watch('email'))
+
   return (
     <>
-      <form>
+      <form onSubmit={ handleSubmit( onSubmit) }>
         <h3>Formulario</h3>
 
         <div style={{display: 'flex', flexDirection: 'column'}}>
@@ -27,7 +33,11 @@ const { register } = useForm<FormInputs>({
           <button type="submit">Ingresar</button>
         </div>
       </form>
+
+      <pre>
+        { JSON.stringify( formState, null, 2)}
+      </pre>
     
     </>
-  )
-}
+  );
+};
