@@ -13,7 +13,7 @@ function App() {
         {/*< Counter/> */}
         {/*< CounterWithHook/> */}
         {/*<LoginPage/> */}
-        <UsersPage/>
+        {/*<UsersPage/> */}
         <FormsPage/>
     </main>
   )
